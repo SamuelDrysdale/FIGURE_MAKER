@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/plugins/Figure_Builder" >
+        <file>icon.png</file>
+    </qresource>
+</RCC>

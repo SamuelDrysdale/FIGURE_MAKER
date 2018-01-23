@@ -1,0 +1,3286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Ui_New_ProjectDialogBase</class>
+ <widget class="QDialog" name="Ui_New_ProjectDialogBase">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1628</width>
+    <height>780</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Figure_Builder</string>
+  </property>
+  <widget class="QDialogButtonBox" name="Master_Buttons">
+   <property name="geometry">
+    <rect>
+     <x>1450</x>
+     <y>740</y>
+     <width>171</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Figure_list_CAPTION">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>50</y>
+     <width>91</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Event List</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Layer_List_CAPTION">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>40</y>
+     <width>281</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Layer List</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Figure_Control_Path_CAPTION">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>0</y>
+     <width>361</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Figure Control File (Figures will be produced in the same folder location)</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Control_Ref_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>20</y>
+     <width>71</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Figure_Zoom_Centroid_CAPTION">
+   <property name="geometry">
+    <rect>
+     <x>800</x>
+     <y>247</y>
+     <width>281</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Set Figure Area</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Centroid_X_CAPTION">
+   <property name="geometry">
+    <rect>
+     <x>800</x>
+     <y>270</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Centroid X-Coordinate</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Centroid_Y_CAPTION">
+   <property name="geometry">
+    <rect>
+     <x>950</x>
+     <y>270</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Centroid Y-Coordinate</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Zoom_CAPTION">
+   <property name="geometry">
+    <rect>
+     <x>800</x>
+     <y>320</y>
+     <width>261</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Figure Zoom/Scale (e.g 1000 for 1cm:1000m)</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Populate_View_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>910</x>
+     <y>240</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Populate Using Current View</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="Q001_CHECK">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>80</y>
+     <width>91</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>1 Year ARI</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="Q005_CHECK">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>140</y>
+     <width>91</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>5 Year ARI</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="Q002_CHECK">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>110</y>
+     <width>91</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>2 Year ARI</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="Q010_CHECK">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>170</y>
+     <width>91</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>10 Year ARI</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="Q100_CHECK">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>260</y>
+     <width>91</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>100 Year ARI</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="Q200_CHECK">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>290</y>
+     <width>91</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>200 Year ARI</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="Q020_CHECK">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>200</y>
+     <width>91</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>20 Year ARI</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="Q050_CHECK">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>230</y>
+     <width>91</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>50 Year ARI</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="Q2000_CHECK">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>380</y>
+     <width>91</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>2000 Year ARI</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="QPMF_CHECK">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>410</y>
+     <width>70</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>PMF</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="Q500_CHECK">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>320</y>
+     <width>91</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>500 Year ARI</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="Q1000_CHECK">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>350</y>
+     <width>91</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>1000 Year ARI</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Event_Notation_CAPTION">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>50</y>
+     <width>111</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Event Notation</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Mapping_Results_CAPTION">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>440</y>
+     <width>111</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Mapping Results</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Res1_Location_CAPTION">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>440</y>
+     <width>151</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Result Location</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="Velocity_CHECK">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>530</y>
+     <width>91</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Velocity</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="Z0_CHECK">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>560</y>
+     <width>91</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Z0</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="HydCat_CHECK">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>620</y>
+     <width>91</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Hydraulic Cat</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="Level_CHECK">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>470</y>
+     <width>91</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Level</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="Depth_CHECK">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>500</y>
+     <width>91</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Depth</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="Risk_Precincts_CHECK">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>650</y>
+     <width>91</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Risk Precints</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="Z1_CHECK">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>590</y>
+     <width>91</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Z1</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Res1_VCP_CAPTION">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>440</y>
+     <width>101</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Result Style</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Level_Res1_Loc_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>470</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Depth_Res1_Loc_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>500</y>
+     <width>41</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Velocity_Res1_Loc_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>530</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Z0_Res1_Loc_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>560</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Z1_Res1_Loc_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>590</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Risk_Precincts_Res1_Loc_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>650</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="HydCat_Res1_Loc_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>620</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Scenario_Notation_CAPTION">
+   <property name="geometry">
+    <rect>
+     <x>1000</x>
+     <y>90</y>
+     <width>171</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Result Scenario Notation(e.g DEV)</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Scenario_Title_CAPTION">
+   <property name="geometry">
+    <rect>
+     <x>800</x>
+     <y>90</y>
+     <width>191</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Scenario Title (as seen in Figure Title)</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Layout_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>800</x>
+     <y>60</y>
+     <width>221</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>A4 Portrait</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>A4 Landscape</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>A3 Portrait</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>A3 Landscape</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="Page_Layout_CAPTION">
+   <property name="geometry">
+    <rect>
+     <x>800</x>
+     <y>40</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Page Layout</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Level_Impact_Res1_Loc_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>680</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="Level_Impacts_CHECK">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>680</y>
+     <width>91</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Level Impacts</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="Velocity_Impacts_CHECK">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>710</y>
+     <width>91</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Velocity Impacts</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Velocity_Impact_Res1_Loc_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>710</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Level_Res2_Loc_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>470</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Z1_Res2_Loc_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>590</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Velocity_Impact_Res2_Loc_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>710</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="HydCat_Res2_Loc_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>620</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Depth_Res2_Loc_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>500</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Z0_Res2_Loc_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>560</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Level_Impact_Res2_Loc_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>680</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Velocity_Res2_Loc_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>530</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Risk_Precincts_Res2_Loc_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>650</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Level_Res3_Loc_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>1050</x>
+     <y>470</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Z1_Res3_Loc_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>1050</x>
+     <y>590</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Velocity_Impact_Res3_Loc_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>1050</x>
+     <y>710</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="HydCat_Res3_Loc_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>1050</x>
+     <y>620</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Depth_Res3_Loc_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>1050</x>
+     <y>500</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Z0_Res3_Loc_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>1050</x>
+     <y>560</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Level_Impact_Res3_Loc_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>1050</x>
+     <y>680</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Velocity_Res3_Loc_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>1050</x>
+     <y>530</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Risk_Precincts_Res3_Loc_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>1050</x>
+     <y>650</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Additional_Res_CAPTION">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>440</y>
+     <width>621</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Additional Result Locations for aids such as Contours or Vector Arrows (must have matching Event and Scenario notation)</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Z1_Res4_Loc_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>1400</x>
+     <y>590</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Z0_Res4_Loc_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>1400</x>
+     <y>560</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Depth_Res4_Loc_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>1400</x>
+     <y>500</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Level_Res4_Loc_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>1400</x>
+     <y>470</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Level_Impact_Res4_Loc_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>1400</x>
+     <y>680</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Velocity_Res4_Loc_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>1400</x>
+     <y>530</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="HydCat_Res4_Loc_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>1400</x>
+     <y>620</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Velocity_Impact_Res4_Loc_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>1400</x>
+     <y>710</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Risk_Precincts_Res4_Loc_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>1400</x>
+     <y>650</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Appendix_Ref_CAPTION">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>440</y>
+     <width>111</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Appendix Referance</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Level_Res1_VCP_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>470</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Velocity_Res1_VCP_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>530</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Z0_Res1_VCP_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>560</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Z1_Res1_VCP_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>590</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="HydCat_Res1_VCP_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>620</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Level_Impact_Res1_VCP_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>680</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Level_Res2_VCP_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>470</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Velocity_Impact_Res1_VCP_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>710</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Z1_Res2_VCP_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>590</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Depth_Res1_VCP_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>500</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Risk_Precincts_Res1_VCP_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>650</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Z0_Res2_VCP_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>560</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="HydCat_Res2_VCP_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>620</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Velocity_Impact_Res2_VCP_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>710</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Depth_Res3_VCP_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>1100</x>
+     <y>500</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Velocity_Res3_VCP_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>1100</x>
+     <y>530</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Level_Res3_VCP_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>1100</x>
+     <y>470</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Velocity_Res2_VCP_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>530</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Depth_Res2_VCP_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>500</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Level_Impact_Res2_VCP_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>680</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Risk_Precincts_Res2_VCP_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>650</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Depth_Res4_VCP_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>1450</x>
+     <y>500</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Z1_Res3_VCP_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>1100</x>
+     <y>590</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Z0_Res3_VCP_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>1100</x>
+     <y>560</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="HydCat_Res4_VCP_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>1450</x>
+     <y>620</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Z1_Res4_VCP_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>1450</x>
+     <y>590</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Velocity_Res4_VCP_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>1450</x>
+     <y>530</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Z0_Res4_VCP_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>1450</x>
+     <y>560</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Velocity_Impact_Res4_VCP_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>1450</x>
+     <y>710</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Risk_Precincts_Res4_VCP_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>1450</x>
+     <y>650</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="HydCat_Res3_VCP_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>1100</x>
+     <y>620</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Level_Impact_Res3_VCP_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>1100</x>
+     <y>680</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Risk_Precincts_Res3_VCP_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>1100</x>
+     <y>650</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Level_Impact_Res4_VCP_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>1450</x>
+     <y>680</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Velocity_Impact_Res3_VCP_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>1100</x>
+     <y>710</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Level_Res4_VCP_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>1450</x>
+     <y>470</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Q001_Notation_BOX">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>80</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Q002_Notation_BOX">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>110</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Q005_Notation_BOX">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>140</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Q010_Notation_BOX">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>170</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Q020_Notation_BOX">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>200</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Q050_Notation_BOX">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>230</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Q100_Notation_BOX">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>260</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Q200_Notation_BOX">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>290</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Q500_Notation_BOX">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>320</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Q2000_Notation_BOX">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>380</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Q1000_Notation_BOX">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>350</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="QPMF_Notation_BOX">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>410</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Level_Appendix_Label_BOX">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>470</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Depth_Appendix_Label_BOX">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>500</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Velocity_Appendix_Label_BOX">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>530</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Z0_Appendix_Label_BOX">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>560</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Z1_Appendix_Label_BOX">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>590</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="HydCat_Appendix_Label_BOX">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>620</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Risk_Precincts_Appendix_Label_BOX">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>650</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Level_Impact_Appendix_Label_BOX">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>680</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Velocity_Impact_Appendix_Label_BOX">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>710</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Velocity_Impact_Res1_Loc_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>710</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Level_Impact_Res1_Loc_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>680</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Risk_Precincts_Res1_Loc_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>650</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="HydCat_Res1_Loc_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>620</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Z1_Res1_Loc_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>590</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Z0_Res1_Loc_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>560</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Velocity_Res1_Loc_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>530</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Depth_Res1_Loc_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>500</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Level_Res1_Loc_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>470</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Control_Ref_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>291</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Scenario_1_Title_BOX">
+   <property name="geometry">
+    <rect>
+     <x>800</x>
+     <y>110</y>
+     <width>191</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Scenario_2_Title_BOX">
+   <property name="geometry">
+    <rect>
+     <x>800</x>
+     <y>140</y>
+     <width>191</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Scenario_3_Title_BOX">
+   <property name="geometry">
+    <rect>
+     <x>800</x>
+     <y>170</y>
+     <width>191</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Scenario_4_Title_BOX">
+   <property name="geometry">
+    <rect>
+     <x>800</x>
+     <y>200</y>
+     <width>191</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Scenario_2_Notation_BOX">
+   <property name="geometry">
+    <rect>
+     <x>1000</x>
+     <y>140</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Scenario_3_Notation_BOX">
+   <property name="geometry">
+    <rect>
+     <x>1000</x>
+     <y>170</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Scenario_1_Notation_BOX">
+   <property name="geometry">
+    <rect>
+     <x>1000</x>
+     <y>110</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Scenario_4_Notation_BOX">
+   <property name="geometry">
+    <rect>
+     <x>1000</x>
+     <y>200</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Centroid_X_Coord_BOX">
+   <property name="geometry">
+    <rect>
+     <x>800</x>
+     <y>290</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Centroid_Y_Coord_BOX">
+   <property name="geometry">
+    <rect>
+     <x>950</x>
+     <y>290</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Zoom_BOX">
+   <property name="geometry">
+    <rect>
+     <x>800</x>
+     <y>340</y>
+     <width>261</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Velocity_Res2_Loc_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>530</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Level_Res2_Loc_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>470</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Z1_Res2_Loc_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>590</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Level_Impact_Res2_Loc_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>680</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Z0_Res2_Loc_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>560</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Velocity_Impact_Res2_Loc_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>710</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Risk_Precincts_Res2_Loc_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>650</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Depth_Res2_Loc_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>500</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="HydCat_Res2_Loc_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>620</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Z0_Res3_Loc_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>940</x>
+     <y>560</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Depth_Res3_Loc_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>940</x>
+     <y>500</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Velocity_Impact_Res3_Loc_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>940</x>
+     <y>710</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Z1_Res3_Loc_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>940</x>
+     <y>590</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Velocity_Res3_Loc_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>940</x>
+     <y>530</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Risk_Precincts_Res3_Loc_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>940</x>
+     <y>650</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Level_Res3_Loc_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>940</x>
+     <y>470</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Level_Impact_Res3_Loc_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>940</x>
+     <y>680</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="HydCat_Res3_Loc_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>940</x>
+     <y>620</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Level_Res4_Loc_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>1290</x>
+     <y>470</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Level_Impact_Res4_Loc_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>1290</x>
+     <y>680</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Depth_Res4_Loc_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>1290</x>
+     <y>500</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="HydCat_Res4_Loc_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>1290</x>
+     <y>620</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Velocity_Impact_Res4_Loc_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>1290</x>
+     <y>710</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Velocity_Res4_Loc_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>1290</x>
+     <y>530</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Z0_Res4_Loc_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>1290</x>
+     <y>560</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Z1_Res4_Loc_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>1290</x>
+     <y>590</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Risk_Precincts_Res4_Loc_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>1290</x>
+     <y>650</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Style_Control_CAPTION">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>0</y>
+     <width>311</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Style Control Directory</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Style_Dir_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>20</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Load_Style_Dir_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>20</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Load</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Style_Dir_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>20</y>
+     <width>291</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="CRS_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>1090</x>
+     <y>20</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="CRS_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>800</x>
+     <y>20</y>
+     <width>291</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="CRS_Caption">
+   <property name="geometry">
+    <rect>
+     <x>800</x>
+     <y>0</y>
+     <width>411</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Set Project CRS</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Legend_Entry_CAPTION">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>320</y>
+     <width>281</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Legend Entry</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Shift_up_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>240</y>
+     <width>31</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>UP</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Add_Layer_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>240</y>
+     <width>81</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Add Layer</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Style_Select_COMBO">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>390</y>
+     <width>311</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Layer_Loc_CAPTION">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>270</y>
+     <width>281</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Layer Location</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Remove_Layer_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>240</y>
+     <width>81</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Remove Layer</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="VCP_Selection_CAPTION">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>370</y>
+     <width>281</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Colour Profile (Define Category Legend Entires in Style)</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Shift_Down_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>660</x>
+     <y>240</y>
+     <width>41</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>DOWN</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Layer_Search_BOX">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>290</y>
+     <width>261</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Layer_Search_BUTTON">
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>290</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Legend_Entry_BOX">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>340</y>
+     <width>311</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="Layer_List_TABLE">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>60</y>
+     <width>311</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string>Location</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Colour</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Legend Entry</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QComboBox" name="Risk_Precincts_Res1_Format_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>650</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>.tab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.shp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.asc</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="Depth_Res1_Format_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>500</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>.tab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.shp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.asc</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="Velocity_Impact_Res1_Format_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>710</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>.tab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.shp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.asc</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="Z0_Res1_Format_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>560</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>.tab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.shp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.asc</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="Z1_Res1_VCP_Format_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>590</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>.tab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.shp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.asc</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="Res1_Format_CAPTION">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>440</y>
+     <width>101</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Result Format</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Level_Impact_Res1_Format_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>680</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>.tab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.shp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.asc</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="Velocity_Res1_Format_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>530</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>.tab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.shp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.asc</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="HydCat_Res1_Format_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>620</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>.tab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.shp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.asc</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="Level_Res1_Format_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>470</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <item>
+    <property name="text">
+     <string>.tab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.shp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.asc</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="Z0_Res2_Format_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>870</x>
+     <y>560</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>.tab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.shp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.asc</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="Velocity_Impact_Res2_Format_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>870</x>
+     <y>710</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>.tab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.shp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.asc</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="Level_Res2_Format_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>870</x>
+     <y>470</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>.tab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.shp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.asc</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="Risk_Precincts_Res2_Format_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>870</x>
+     <y>650</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>.tab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.shp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.asc</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="HydCat_Res2_Format_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>870</x>
+     <y>620</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>.tab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.shp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.asc</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="Z1_Res2_VCP_Format_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>870</x>
+     <y>590</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>.tab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.shp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.asc</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="Depth_Res2_Format_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>870</x>
+     <y>500</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>.tab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.shp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.asc</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="Velocity_Res2_Format_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>870</x>
+     <y>530</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>.tab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.shp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.asc</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="Level_Impact_Res2_Format_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>870</x>
+     <y>680</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>.tab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.shp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.asc</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="Depth_Res3_Format_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>1220</x>
+     <y>500</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>.tab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.shp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.asc</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="Level_Impact_Res3_Format_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>1220</x>
+     <y>680</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>.tab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.shp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.asc</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="Velocity_Res3_Format_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>1220</x>
+     <y>530</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>.tab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.shp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.asc</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="Risk_Precincts_Res3_Format_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>1220</x>
+     <y>650</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>.tab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.shp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.asc</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="Velocity_Impact_Res3_Format_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>1220</x>
+     <y>710</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>.tab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.shp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.asc</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="HydCat_Res3_Format_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>1220</x>
+     <y>620</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>.tab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.shp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.asc</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="Z1_Res3_VCP_Format_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>1220</x>
+     <y>590</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>.tab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.shp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.asc</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="Z0_Res3_Format_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>1220</x>
+     <y>560</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>.tab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.shp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.asc</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="Level_Res3_Format_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>1220</x>
+     <y>470</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>.tab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.shp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.asc</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="Depth_Res4_Format_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>1570</x>
+     <y>500</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>.tab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.shp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.asc</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="Level_Impact_Res4_Format_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>1570</x>
+     <y>680</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>.tab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.shp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.asc</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="Velocity_Res4_Format_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>1570</x>
+     <y>530</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>.tab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.shp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.asc</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="Risk_Precincts_Res4_Format_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>1570</x>
+     <y>650</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>.tab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.shp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.asc</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="Velocity_Impact_Res4_Format_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>1570</x>
+     <y>710</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>.tab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.shp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.asc</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="HydCat_Res4_Format_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>1570</x>
+     <y>620</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>.tab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.shp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.asc</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="Z1_Res4_VCP_Format_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>1570</x>
+     <y>590</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>.tab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.shp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.asc</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="Z0_Res4_Format_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>1570</x>
+     <y>560</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>.tab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.shp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.asc</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="Level_Res4_Format_SELECT">
+   <property name="geometry">
+    <rect>
+     <x>1570</x>
+     <y>470</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>.tab</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.shp</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>.asc</string>
+    </property>
+   </item>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>Master_Buttons</sender>
+   <signal>accepted()</signal>
+   <receiver>Ui_New_ProjectDialogBase</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Master_Buttons</sender>
+   <signal>rejected()</signal>
+   <receiver>Ui_New_ProjectDialogBase</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
